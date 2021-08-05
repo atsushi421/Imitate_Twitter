@@ -10,3 +10,7 @@ class UserAdmin(admin.ModelAdmin):
 @admin.register(models.Tweet)
 class TweetAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(models.Like)
+class LikeAdmin(admin.ModelAdmin):
+    pass

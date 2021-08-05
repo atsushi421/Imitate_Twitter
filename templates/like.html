@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block main %}
+<form action="{% url 'like' %}" method="post">
+    {% csrf_token %}
+    <button><i class="far fa-lg fa-heart"></i></button>
+</form>
+<p>{{ tweet.like_set.count }}</p>
+{% endblock %}

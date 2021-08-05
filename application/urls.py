@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include  # include は委譲
 from django.contrib.auth.decorators import login_required
-from .views import index, signup, activate, tweet
+from .views import index, signup, activate, tweet, like
 
 
 urlpatterns = [
@@ -10,4 +10,5 @@ urlpatterns = [
     path('signup/', signup.SignUpView.as_view(), name='signup'),
     path('activate/<uidb64>/<token>/', activate.ActivateView.as_view(), name='activate'),  # <>はビュー側でパラメータとして受け取れる
     path('tweet/', tweet.TweetView.as_view(), name='tweet'),
+    path('like/', like.LikeView.as_view(), name='like'),
 ]
