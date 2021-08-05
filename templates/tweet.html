@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block main %}
+<h2>What's happening?</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Tweet" class="btn btn-primary" />
+</form>
+{% endblock %}
